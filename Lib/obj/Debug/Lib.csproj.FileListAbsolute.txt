@@ -31,3 +31,14 @@ E:\Study\Quản lý dự án CNTT\Chinese-chess\Lib\obj\Debug\Lib.csproj.CoreCom
 E:\Study\Quản lý dự án CNTT\Chinese-chess\Lib\obj\Debug\Lib.csproj.CopyComplete
 E:\Study\Quản lý dự án CNTT\Chinese-chess\Lib\obj\Debug\Lib.dll
 E:\Study\Quản lý dự án CNTT\Chinese-chess\Lib\obj\Debug\Lib.pdb
+C:\Users\anhtr\Documents\Chinese-chess\Lib\bin\Debug\Lib.dll
+C:\Users\anhtr\Documents\Chinese-chess\Lib\bin\Debug\Lib.pdb
+C:\Users\anhtr\Documents\Chinese-chess\Lib\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\anhtr\Documents\Chinese-chess\Lib\bin\Debug\EntityFramework.dll
+C:\Users\anhtr\Documents\Chinese-chess\Lib\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\anhtr\Documents\Chinese-chess\Lib\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\anhtr\Documents\Chinese-chess\Lib\obj\Debug\Lib.csproj.AssemblyReference.cache
+C:\Users\anhtr\Documents\Chinese-chess\Lib\obj\Debug\Lib.csproj.CoreCompileInputs.cache
+C:\Users\anhtr\Documents\Chinese-chess\Lib\obj\Debug\Lib.csproj.CopyComplete
+C:\Users\anhtr\Documents\Chinese-chess\Lib\obj\Debug\Lib.dll
+C:\Users\anhtr\Documents\Chinese-chess\Lib\obj\Debug\Lib.pdb

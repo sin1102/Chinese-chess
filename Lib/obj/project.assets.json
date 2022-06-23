@@ -218,20 +218,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\anhtr\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Study\\Quản lý dự án CNTT\\Chinese-chess\\Lib\\Lib.csproj",
+      "projectUniqueName": "C:\\Users\\anhtr\\Documents\\Chinese-chess\\Lib\\Lib.csproj",
       "projectName": "Lib",
-      "projectPath": "E:\\Study\\Quản lý dự án CNTT\\Chinese-chess\\Lib\\Lib.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\Study\\Quản lý dự án CNTT\\Chinese-chess\\Lib\\obj\\",
+      "projectPath": "C:\\Users\\anhtr\\Documents\\Chinese-chess\\Lib\\Lib.csproj",
+      "packagesPath": "C:\\Users\\anhtr\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\anhtr\\Documents\\Chinese-chess\\Lib\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\anhtr\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
