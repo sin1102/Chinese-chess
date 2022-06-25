@@ -53,3 +53,14 @@ D:\Git\DoAnQuanLyDuAn\Chinese-chess\Lib\obj\Debug\Lib.csproj.CoreCompileInputs.c
 D:\Git\DoAnQuanLyDuAn\Chinese-chess\Lib\obj\Debug\Lib.csproj.CopyComplete
 D:\Git\DoAnQuanLyDuAn\Chinese-chess\Lib\obj\Debug\Lib.dll
 D:\Git\DoAnQuanLyDuAn\Chinese-chess\Lib\obj\Debug\Lib.pdb
+C:\Users\Admin\Music\Chinese-chess\Lib\bin\Debug\Lib.dll
+C:\Users\Admin\Music\Chinese-chess\Lib\bin\Debug\Lib.pdb
+C:\Users\Admin\Music\Chinese-chess\Lib\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Music\Chinese-chess\Lib\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Music\Chinese-chess\Lib\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Admin\Music\Chinese-chess\Lib\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Admin\Music\Chinese-chess\Lib\obj\Debug\Lib.csproj.AssemblyReference.cache
+C:\Users\Admin\Music\Chinese-chess\Lib\obj\Debug\Lib.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Music\Chinese-chess\Lib\obj\Debug\Lib.csproj.CopyComplete
+C:\Users\Admin\Music\Chinese-chess\Lib\obj\Debug\Lib.dll
+C:\Users\Admin\Music\Chinese-chess\Lib\obj\Debug\Lib.pdb

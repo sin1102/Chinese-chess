@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Git\\DoAnQuanLyDuAn\\Chinese-chess\\Lib\\Lib.csproj": {}
+    "C:\\Users\\Admin\\Music\\Chinese-chess\\Lib\\Lib.csproj": {}
   },
   "projects": {
-    "D:\\Git\\DoAnQuanLyDuAn\\Chinese-chess\\Lib\\Lib.csproj": {
+    "C:\\Users\\Admin\\Music\\Chinese-chess\\Lib\\Lib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Git\\DoAnQuanLyDuAn\\Chinese-chess\\Lib\\Lib.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Music\\Chinese-chess\\Lib\\Lib.csproj",
         "projectName": "Lib",
-        "projectPath": "D:\\Git\\DoAnQuanLyDuAn\\Chinese-chess\\Lib\\Lib.csproj",
+        "projectPath": "C:\\Users\\Admin\\Music\\Chinese-chess\\Lib\\Lib.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Git\\DoAnQuanLyDuAn\\Chinese-chess\\Lib\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Music\\Chinese-chess\\Lib\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [

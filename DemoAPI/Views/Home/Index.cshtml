@@ -627,6 +627,119 @@
                         }
 
 
+                        phaoif: if (this.id.indexOf("phaodo1") >= 0) {
+                            console.log(app.indexStartI + ", " + app.indexStartJ + "; " + app.indexStopI + ", " + app.indexStopJ)
+                            var count = 0;
+                            if (app.indexStopI > -1 && app.indexStopJ > -1 && app.indexStopI < 10 && app.indexStartJ < 10) {
+                                if (app.indexStartI > app.indexStopI) {
+                                    for (var i = app.indexStartI - 1; i > app.indexStopI; i--) {
+                                        if (app.hasChessNode(app.chessMatrix[i][app.indexStartJ].left, app.chessMatrix[i][app.indexStartJ].top, app.chessMatrix[i][app.indexStartJ].id) != 0)
+                                            count++;
+                                        console.log(count);
+                                    }
+                                    console.log(app.indexStartI + ", " + app.indexStartJ + "; " + app.indexStopI + ", " + app.indexStopJ)
+                                    if (count == 0 && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0 && app.indexStartJ == app.indexStopJ) {
+                                        var node = $("#" + this.id);
+                                        console.log("day la di len")
+                                        node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
+                                        node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
+                                        app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        flag = true;
+                                        break phaoif;
+                                    } else if (count == 1 && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) != 1 && app.indexStartJ == app.indexStopJ) {
+                                        app.chessMatrix[app.indexStopI][app.indexStopJ].visible = false;
+                                        var node = $("#" + this.id);
+                                        node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
+                                        node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
+                                        app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        flag = true;
+                                        break phaoif;
+                                    }
+                                } else {
+                                    console.log(app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id))
+
+                                    for (var i = app.indexStartI + 1; i < app.indexStopI; i++) {
+                                        if (app.hasChessNode(app.chessMatrix[i][app.indexStartJ].left, app.chessMatrix[i][app.indexStartJ].top, app.chessMatrix[i][app.indexStartJ].id) != 0)
+                                            count++;
+                                        console.log(count);
+                                    }
+                                    if (count === 0 && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) === 0 && app.indexStartJ === app.indexStopJ) {
+                                        var node = $("#" + this.id);
+                                        console.log("day la di xuong")
+                                        node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
+                                        node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
+                                        app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        console.log(app.indexStartI + ", " + app.indexStartJ + "; " + app.indexStopI + ", " + app.indexStopJ)
+
+                                        flag = true;
+                                        break phaoif;
+                                    }
+                                    else if (count == 1 && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) != 1 && app.indexStartJ == app.indexStopJ) {
+                                        var node = $("#" + this.id);
+                                        node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
+                                        node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
+                                        app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        flag = true;
+                                        break phaoif;
+                                    }
+                                }
+                                if (app.indexStartJ > app.indexStopJ) {
+
+                                    for (var i = app.indexStartJ - 1; i > app.indexStopJ; i--) {
+                                        if (app.hasChessNode(app.chessMatrix[app.indexStartI][i].left, app.chessMatrix[app.indexStartI][i].top, app.chessMatrix[app.indexStartI][i].id) != 0)
+                                            count++;
+                                        console.log(count);
+                                    }
+                                    if (count == 0 && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0 && app.indexStartI == app.indexStopI) {
+                                        var node = $("#" + this.id);
+                                        console.log("day la sang trai")
+                                        node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
+                                        node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
+                                        app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        flag = true;
+                                        break phaoif;
+                                    }
+                                    else if (count == 1 && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) != 1 && app.indexStartI == app.indexStopI) {
+                                        var node = $("#" + this.id);
+                                        node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
+                                        node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
+                                        app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        flag = true;
+                                        break phaoif;
+                                    }
+                                } else {
+
+                                    for (var i = app.indexStartJ + 1; i < app.indexStopJ; i++) {
+                                        if (app.hasChessNode(app.chessMatrix[app.indexStartI][i].left, app.chessMatrix[app.indexStartI][i].top, app.chessMatrix[app.indexStartI][i].id) != 0) {
+                                            count++;
+                                            console.log(i);
+                                        }
+                                        console.log(count);
+                                    }
+                                    if (count == 0 && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0 && app.indexStartI == app.indexStopI) {
+                                        var node = $("#" + this.id);
+                                        console.log("day la sang phai")
+                                        node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
+                                        node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
+                                        app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        flag = true;
+                                        break phaoif;
+                                    }
+                                    else if (count == 1 && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) != 1 && app.indexStartI == app.indexStopI) {
+                                        var node = $("#" + this.id);
+                                        node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
+                                        node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
+                                        app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        flag = true;
+                                        break phaoif;
+                                    }
+                                }
+                            }
+
+
+                        }
+
+
                         if (flag == true) {
                             
                             var res = axios.post('/api/chess/movenode', movelist).then(response => {
