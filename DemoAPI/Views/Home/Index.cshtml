@@ -102,7 +102,7 @@
                         strMatrix += '  ' + "(" + this.chessMatrix[i][j].top + ',' + this.chessMatrix[i][j].left + "-" + this.chessMatrix[i][j].id+ ")";
                     }
                     console.log();
-                    console.log(strMatrix);
+                    //console.log(strMatrix);
                 }
             },
             initPoint(left, top, chessNodeId) {
@@ -627,57 +627,64 @@
                         }
 
 
-                        phaoif: if (this.id.indexOf("phaodo1") >= 0) {
+                        phaoif: if (this.id.indexOf("phaodo") >= 0) {
                             console.log(app.indexStartI + ", " + app.indexStartJ + "; " + app.indexStopI + ", " + app.indexStopJ)
                             var count = 0;
+                            var tempStopI = app.indexStopI;
+                            var tempStopJ = app.indexStopJ;
                             if (app.indexStopI > -1 && app.indexStopJ > -1 && app.indexStopI < 10 && app.indexStartJ < 10) {
                                 if (app.indexStartI > app.indexStopI) {
-                                    for (var i = app.indexStartI - 1; i > app.indexStopI; i--) {
+                                    for (var i = app.indexStartI - 1; i > tempStopI; i--) {
                                         if (app.hasChessNode(app.chessMatrix[i][app.indexStartJ].left, app.chessMatrix[i][app.indexStartJ].top, app.chessMatrix[i][app.indexStartJ].id) != 0)
                                             count++;
                                         console.log(count);
                                     }
                                     console.log(app.indexStartI + ", " + app.indexStartJ + "; " + app.indexStopI + ", " + app.indexStopJ)
-                                    if (count == 0 && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0 && app.indexStartJ == app.indexStopJ) {
+                                    if (count == 0 && app.hasChessNode(app.chessMatrix[i][app.indexStartJ].left, app.chessMatrix[i][app.indexStartJ].top, app.chessMatrix[i][app.indexStartJ].id) == 0 && app.indexStartJ == app.indexStopJ) {
                                         var node = $("#" + this.id);
                                         console.log("day la di len")
-                                        node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                        node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
+                                        node.css({ 'top': app.chessMatrix[tempStopI][tempStopJ].top + 'px' });
+                                        node.css({ 'left': app.chessMatrix[tempStopI][tempStopJ].left + 'px' });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
                                         flag = true;
                                         break phaoif;
-                                    } else if (count == 1 && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) != 1 && app.indexStartJ == app.indexStopJ) {
-                                        app.chessMatrix[app.indexStopI][app.indexStopJ].visible = false;
+                                    } else if (count == 1 && app.hasChessNode(app.chessMatrix[i][app.indexStartJ].left, app.chessMatrix[i][app.indexStartJ].top, app.chessMatrix[i][app.indexStartJ].id) == -1 && app.indexStartJ == app.indexStopJ) {
+                                        app.chessMatrix[tempStopI][tempStopJ].visible = "none";
                                         var node = $("#" + this.id);
-                                        node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                        node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
+                                        node.css({ 'top': app.chessMatrix[tempStopI][tempStopJ].top + 'px' });
+                                        node.css({ 'left': app.chessMatrix[tempStopI][tempStopJ].left + 'px' });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
                                         flag = true;
                                         break phaoif;
                                     }
                                 } else {
-                                    console.log(app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id))
-
-                                    for (var i = app.indexStartI + 1; i < app.indexStopI; i++) {
-                                        if (app.hasChessNode(app.chessMatrix[i][app.indexStartJ].left, app.chessMatrix[i][app.indexStartJ].top, app.chessMatrix[i][app.indexStartJ].id) != 0)
+                                    for (var i = app.indexStartI + 1; i < tempStopI; i++) {
+                                        if (app.hasChessNode(app.chessMatrix[i][app.indexStartJ].left, app.chessMatrix[i][app.indexStartJ].top, app.chessMatrix[i][app.indexStartJ].id) != 0) {
                                             count++;
+                                            console.log(app.hasChessNode(app.chessMatrix[i][app.indexStartJ].left, app.chessMatrix[i][app.indexStartJ].top, app.chessMatrix[i][app.indexStartJ].id))
+                                        }
+                                            
                                         console.log(count);
                                     }
-                                    if (count === 0 && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) === 0 && app.indexStartJ === app.indexStopJ) {
+                                    console.log(count)
+                                    console.log(app.hasChessNode(app.chessMatrix[tempStopI][tempStopJ].left, app.chessMatrix[tempStopI][tempStopJ].top, app.chessMatrix[tempStopI][tempStopJ].id))
+                                    if (count === 0 && app.hasChessNode(app.chessMatrix[tempStopI][tempStopJ].left, app.chessMatrix[tempStopI][tempStopJ].top, app.chessMatrix[tempStopI][tempStopJ].id) === 0 && app.indexStartJ === app.indexStopJ) {
                                         var node = $("#" + this.id);
                                         console.log("day la di xuong")
-                                        node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                        node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
+                                        node.css({ 'top': app.chessMatrix[tempStopI][tempStopJ].top + 'px' });
+                                        node.css({ 'left': app.chessMatrix[tempStopI][tempStopJ].left + 'px' });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
                                         console.log(app.indexStartI + ", " + app.indexStartJ + "; " + app.indexStopI + ", " + app.indexStopJ)
-
                                         flag = true;
                                         break phaoif;
                                     }
-                                    else if (count == 1 && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) != 1 && app.indexStartJ == app.indexStopJ) {
+                                    
+                                    else if (count === 1 && app.hasChessNode(app.chessMatrix[tempStopI][tempStopJ].left, app.chessMatrix[tempStopI][tempStopJ].top, app.chessMatrix[tempStopI][tempStopJ].id) == 1 && app.indexStartJ == tempStopJ) {
+                                        console.log("an quan")
+                                        app.chessMatrix[tempStopI][tempStopJ].visible = "none";
                                         var node = $("#" + this.id);
-                                        node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                        node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
+                                        node.css({ 'top': app.chessMatrix[tempStopI][tempStopJ].top + 'px' });
+                                        node.css({ 'left': app.chessMatrix[tempStopI][tempStopJ].left + 'px' });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
                                         flag = true;
                                         break phaoif;
@@ -685,50 +692,51 @@
                                 }
                                 if (app.indexStartJ > app.indexStopJ) {
 
-                                    for (var i = app.indexStartJ - 1; i > app.indexStopJ; i--) {
+                                    for (var i = app.indexStartJ - 1; i > tempStopJ; i--) {
                                         if (app.hasChessNode(app.chessMatrix[app.indexStartI][i].left, app.chessMatrix[app.indexStartI][i].top, app.chessMatrix[app.indexStartI][i].id) != 0)
                                             count++;
                                         console.log(count);
                                     }
-                                    if (count == 0 && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0 && app.indexStartI == app.indexStopI) {
+                                    if (count == 0 && app.hasChessNode(app.chessMatrix[tempStopI][tempStopJ].left, app.chessMatrix[tempStopI][tempStopJ].top, app.chessMatrix[tempStopI][tempStopJ].id) == 0 && app.indexStartI == app.indexStopI) {
                                         var node = $("#" + this.id);
                                         console.log("day la sang trai")
-                                        node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                        node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
+                                        node.css({ 'top': app.chessMatrix[tempStopI][tempStopJ].top + 'px' });
+                                        node.css({ 'left': app.chessMatrix[tempStopI][tempStopJ].left + 'px' });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
                                         flag = true;
                                         break phaoif;
                                     }
-                                    else if (count == 1 && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) != 1 && app.indexStartI == app.indexStopI) {
+                                    else if (count == 1 && app.hasChessNode(app.chessMatrix[tempStopI][tempStopJ].left, app.chessMatrix[tempStopI][tempStopJ].top, app.chessMatrix[tempStopI][tempStopJ].id) == -1 && app.indexStartI == app.indexStopI) {
                                         var node = $("#" + this.id);
-                                        node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                        node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
+                                        node.css({ 'top': app.chessMatrix[tempStopI][tempStopJ].top + 'px' });
+                                        node.css({ 'left': app.chessMatrix[tempStopI][tempStopJ].left + 'px' });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
                                         flag = true;
                                         break phaoif;
                                     }
                                 } else {
 
-                                    for (var i = app.indexStartJ + 1; i < app.indexStopJ; i++) {
+                                    for (var i = app.indexStartJ + 1; i < tempStopJ; i++) {
                                         if (app.hasChessNode(app.chessMatrix[app.indexStartI][i].left, app.chessMatrix[app.indexStartI][i].top, app.chessMatrix[app.indexStartI][i].id) != 0) {
                                             count++;
                                             console.log(i);
                                         }
                                         console.log(count);
                                     }
-                                    if (count == 0 && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0 && app.indexStartI == app.indexStopI) {
+                                    console.log("vi tri: " + app.hasChessNode(app.chessMatrix[tempStopI][tempStopJ].left, app.chessMatrix[tempStopI][tempStopJ].top, app.chessMatrix[tempStopI][tempStopJ].id))
+                                    if (count == 0 && app.hasChessNode(app.chessMatrix[tempStopI][tempStopJ].left, app.chessMatrix[tempStopI][tempStopJ].top, app.chessMatrix[tempStopI][tempStopJ].id) == 0 && app.indexStartI == app.indexStopI) {
                                         var node = $("#" + this.id);
                                         console.log("day la sang phai")
-                                        node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                        node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
+                                        node.css({ 'top': app.chessMatrix[tempStopI][tempStopJ].top + 'px' });
+                                        node.css({ 'left': app.chessMatrix[tempStopI][tempStopJ].left + 'px' });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
                                         flag = true;
                                         break phaoif;
                                     }
-                                    else if (count == 1 && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) != 1 && app.indexStartI == app.indexStopI) {
+                                    else if (count == 1 && app.hasChessNode(app.chessMatrix[tempStopI][tempStopJ].left, app.chessMatrix[tempStopI][tempStopJ].top, app.chessMatrix[tempStopI][tempStopJ].id) == -1 && app.indexStartI == app.indexStopI) {
                                         var node = $("#" + this.id);
-                                        node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                        node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
+                                        node.css({ 'top': app.chessMatrix[tempStopI][tempStopJ].top + 'px' });
+                                        node.css({ 'left': app.chessMatrix[tempStopI][tempStopJ].left + 'px' });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
                                         flag = true;
                                         break phaoif;
