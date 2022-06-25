@@ -423,8 +423,8 @@
                             }
                         }
 
-                        //Mã đỏ 1
-                        if (this.id.indexOf("mado1") >= 0) {
+                        //4 Quân mã
+                        if (this.id.indexOf("ma") >= 0) {
                             if ((app.indexStopJ >= 0 && app.indexStopJ <= 8 && app.indexStopI >= 0 && app.indexStopI <= 9)
                                 && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) != 1) {
 
@@ -475,165 +475,8 @@
                             }
                         }
 
-
-                        //Mã đỏ 2
-                        if (this.id.indexOf("mado2") >= 0) {
-                            if ((app.indexStopJ >= 0 && app.indexStopJ <= 8 && app.indexStopI >= 0 && app.indexStopI <= 9)
-                                && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) != 1) {
-
-                                //qua phai
-                                if (((app.indexStopI - app.indexStartI == -1 && app.indexStopJ - app.indexStartJ == 2) ||
-                                    (app.indexStopI - app.indexStartI == 1 && app.indexStopJ - app.indexStartJ == 2))
-                                    && app.hasChessNode(app.chessMatrix[app.indexStartI][app.indexStartJ + 1].left, app.chessMatrix[app.indexStartI][app.indexStartJ + 1].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0) {
-                                    //toa do moi
-                                    var node = $("#" + this.id);
-                                    node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                    node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
-                                    app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-                                    flag = true;
-                                }
-                                //di len
-                                if (((app.indexStopI - app.indexStartI == 2 && app.indexStopJ - app.indexStartJ == -1) ||
-                                    (app.indexStopI - app.indexStartI == 2 && app.indexStopJ - app.indexStartJ == 1))
-                                    && app.hasChessNode(app.chessMatrix[app.indexStartI + 1][app.indexStartJ].left, app.chessMatrix[app.indexStartI + 1][app.indexStartJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0) {
-                                    //toa do moi
-                                    var node = $("#" + this.id);
-                                    node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                    node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
-                                    app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-                                    flag = true;
-                                }
-                                //di xuong
-                                if (((app.indexStopI - app.indexStartI == -2 && app.indexStopJ - app.indexStartJ == -1) ||
-                                    (app.indexStopI - app.indexStartI == -2 && app.indexStopJ - app.indexStartJ == 1))
-                                    && app.hasChessNode(app.chessMatrix[app.indexStartI - 1][app.indexStartJ].left, app.chessMatrix[app.indexStartI - 1][app.indexStartJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0) {
-                                    //toa do moi
-                                    var node = $("#" + this.id);
-                                    node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                    node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
-                                    app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-                                    flag = true;
-                                }
-                                //qua trai
-                                if (((app.indexStopI - app.indexStartI == -1 && app.indexStopJ - app.indexStartJ == -2) ||
-                                    (app.indexStopI - app.indexStartI == 1 && app.indexStopJ - app.indexStartJ == -2))
-                                    && app.hasChessNode(app.chessMatrix[app.indexStartI][app.indexStartJ - 1].left, app.chessMatrix[app.indexStartI][app.indexStartJ - 1].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0) {
-                                    //toa do moi
-                                    var node = $("#" + this.id);
-                                    node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                    node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
-                                    app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-                                    flag = true;
-                                }
-                            }
-                        }
-
-                        //Mã đen 1
-                        if (this.id.indexOf("maden1") >= 0) {
-                            if ((app.indexStopJ >= 0 && app.indexStopJ <= 8 && app.indexStopI >= 0 && app.indexStopI <= 9)
-                                && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) != 1) {
-
-                                //qua phai
-                                if (((app.indexStopI - app.indexStartI == -1 && app.indexStopJ - app.indexStartJ == 2) ||
-                                    (app.indexStopI - app.indexStartI == 1 && app.indexStopJ - app.indexStartJ == 2))
-                                    && app.hasChessNode(app.chessMatrix[app.indexStartI][app.indexStartJ + 1].left, app.chessMatrix[app.indexStartI][app.indexStartJ + 1].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0) {
-                                    //toa do moi
-                                    var node = $("#" + this.id);
-                                    node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                    node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
-                                    app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-                                    flag = true;
-                                }
-                                //di len
-                                if (((app.indexStopI - app.indexStartI == 2 && app.indexStopJ - app.indexStartJ == -1) ||
-                                    (app.indexStopI - app.indexStartI == 2 && app.indexStopJ - app.indexStartJ == 1))
-                                    && app.hasChessNode(app.chessMatrix[app.indexStartI + 1][app.indexStartJ].left, app.chessMatrix[app.indexStartI + 1][app.indexStartJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0) {
-                                    //toa do moi
-                                    var node = $("#" + this.id);
-                                    node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                    node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
-                                    app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-                                    flag = true;
-                                }
-                                //di xuong
-                                if (((app.indexStopI - app.indexStartI == -2 && app.indexStopJ - app.indexStartJ == -1) ||
-                                    (app.indexStopI - app.indexStartI == -2 && app.indexStopJ - app.indexStartJ == 1))
-                                    && app.hasChessNode(app.chessMatrix[app.indexStartI - 1][app.indexStartJ].left, app.chessMatrix[app.indexStartI - 1][app.indexStartJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0) {
-                                    //toa do moi
-                                    var node = $("#" + this.id);
-                                    node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                    node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
-                                    app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-                                    flag = true;
-                                }
-                                //qua trai
-                                if (((app.indexStopI - app.indexStartI == -1 && app.indexStopJ - app.indexStartJ == -2) ||
-                                    (app.indexStopI - app.indexStartI == 1 && app.indexStopJ - app.indexStartJ == -2))
-                                    && app.hasChessNode(app.chessMatrix[app.indexStartI][app.indexStartJ - 1].left, app.chessMatrix[app.indexStartI][app.indexStartJ - 1].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0) {
-                                    //toa do moi
-                                    var node = $("#" + this.id);
-                                    node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                    node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
-                                    app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-                                    flag = true;
-                                }
-                            }
-                        }
-
-                        //Mã đen 2
-                        if (this.id.indexOf("maden2") >= 0) {
-                            if ((app.indexStopJ >= 0 && app.indexStopJ <= 8 && app.indexStopI >= 0 && app.indexStopI <= 9)
-                                && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) != 1) {
-
-                                //qua phai
-                                if (((app.indexStopI - app.indexStartI == -1 && app.indexStopJ - app.indexStartJ == 2) ||
-                                    (app.indexStopI - app.indexStartI == 1 && app.indexStopJ - app.indexStartJ == 2))
-                                    && app.hasChessNode(app.chessMatrix[app.indexStartI][app.indexStartJ + 1].left, app.chessMatrix[app.indexStartI][app.indexStartJ + 1].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0) {
-                                    //toa do moi
-                                    var node = $("#" + this.id);
-                                    node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                    node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
-                                    app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-                                    flag = true;
-                                }
-                                //di len
-                                if (((app.indexStopI - app.indexStartI == 2 && app.indexStopJ - app.indexStartJ == -1) ||
-                                    (app.indexStopI - app.indexStartI == 2 && app.indexStopJ - app.indexStartJ == 1))
-                                    && app.hasChessNode(app.chessMatrix[app.indexStartI + 1][app.indexStartJ].left, app.chessMatrix[app.indexStartI + 1][app.indexStartJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0) {
-                                    //toa do moi
-                                    var node = $("#" + this.id);
-                                    node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                    node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
-                                    app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-                                    flag = true;
-                                }
-                                //di xuong
-                                if (((app.indexStopI - app.indexStartI == -2 && app.indexStopJ - app.indexStartJ == -1) ||
-                                    (app.indexStopI - app.indexStartI == -2 && app.indexStopJ - app.indexStartJ == 1))
-                                    && app.hasChessNode(app.chessMatrix[app.indexStartI - 1][app.indexStartJ].left, app.chessMatrix[app.indexStartI - 1][app.indexStartJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0) {
-                                    //toa do moi
-                                    var node = $("#" + this.id);
-                                    node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                    node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
-                                    app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-                                    flag = true;
-                                }
-                                //qua trai
-                                if (((app.indexStopI - app.indexStartI == -1 && app.indexStopJ - app.indexStartJ == -2) ||
-                                    (app.indexStopI - app.indexStartI == 1 && app.indexStopJ - app.indexStartJ == -2))
-                                    && app.hasChessNode(app.chessMatrix[app.indexStartI][app.indexStartJ - 1].left, app.chessMatrix[app.indexStartI][app.indexStartJ - 1].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0) {
-                                    //toa do moi
-                                    var node = $("#" + this.id);
-                                    node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                    node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
-                                    app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-                                    flag = true;
-                                }
-                            }
-                        }
-
-                        //tượng đỏ 1
-                        if (this.id.indexOf("tuongdo1") >= 0) {
+                        //tượng đỏ 
+                        if (this.id.indexOf("tuongdo") >= 0) {
                             if ((app.indexStopJ >= 0 && app.indexStopJ <= 8 && app.indexStopI >= 0 && app.indexStopI <= 4)
                                 && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) != 1) {
 
@@ -680,56 +523,8 @@
                             }
                         }
 
-                        //tượng đỏ 2
-                        if (this.id.indexOf("tuongdo2") >= 0) {
-                            if ((app.indexStopJ >= 0 && app.indexStopJ <= 8 && app.indexStopI >= 0 && app.indexStopI <= 4)
-                                && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) != 1) {
-
-                                //qua lên xéo phải
-                                if (((app.indexStopI - app.indexStartI == 2 && app.indexStopJ - app.indexStartJ == 2))
-                                    && app.hasChessNode(app.chessMatrix[app.indexStartI + 1][app.indexStartJ + 1].left, app.chessMatrix[app.indexStartI + 1][app.indexStartJ + 1].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0) {
-                                    //toa do moi
-                                    var node = $("#" + this.id);
-                                    node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                    node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
-                                    app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-                                    flag = true;
-                                }
-                                //qua lên xéo trái
-                                if ((app.indexStopI - app.indexStartI == 2 && app.indexStopJ - app.indexStartJ == -2)
-                                    && app.hasChessNode(app.chessMatrix[app.indexStartI + 1][app.indexStartJ - 1].left, app.chessMatrix[app.indexStartI + 1][app.indexStartJ - 1].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0) {
-                                    //toa do moi
-                                    var node = $("#" + this.id);
-                                    node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                    node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
-                                    app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-                                    flag = true;
-                                }
-                                //di xuong xéo phải
-                                if ((app.indexStopI - app.indexStartI == -2 && app.indexStopJ - app.indexStartJ == 2)
-                                    && app.hasChessNode(app.chessMatrix[app.indexStartI + -1][app.indexStartJ + 1].left, app.chessMatrix[app.indexStartI - 1][app.indexStartJ + 1].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0) {
-                                    //toa do moi
-                                    var node = $("#" + this.id);
-                                    node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                    node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
-                                    app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-                                    flag = true;
-                                }
-                                //đi xuống xéo trái
-                                if ((app.indexStopI - app.indexStartI == -2 && app.indexStopJ - app.indexStartJ == -2)
-                                    && app.hasChessNode(app.chessMatrix[app.indexStartI - 1][app.indexStartJ - 1].left, app.chessMatrix[app.indexStartI - 1][app.indexStartJ - 1].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0) {
-                                    //toa do moi
-                                    var node = $("#" + this.id);
-                                    node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                    node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
-                                    app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-                                    flag = true;
-                                }
-                            }
-                        }
-
                         //tượng đen 1
-                        if (this.id.indexOf("tuongden1") >= 0) {
+                        if (this.id.indexOf("tuongden") >= 0) {
                             if ((app.indexStopJ >= 0 && app.indexStopJ <= 8 && app.indexStopI >= 5 && app.indexStopI <= 9)
                                 && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) != 1) {
 
@@ -776,51 +571,58 @@
                             }
                         }
 
-                        //tượng đen 1
-                        if (this.id.indexOf("tuongden2") >= 0) {
-                            if ((app.indexStopJ >= 0 && app.indexStopJ <= 8 && app.indexStopI >= 5 && app.indexStopI <= 9)
+                      
+                        //5 tốt đỏ
+                        if (this.id.indexOf("totdo") >= 0) {
+                            if ((app.indexStopI - app.indexStartI) == 1 && ((app.indexStopJ - app.indexStartJ) == 0)
+                                && (app.indexStopJ >= 0 && app.indexStopJ <= 8 && app.indexStopI >= 4 && app.indexStopI <= 5) &&
+                                app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) != 1) {
+                                //tao vi tri moi
+                                var node = $("#" + this.id);
+                                node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
+                                node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
+                                app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                flag = true;
+
+                            } else if (((Math.abs(app.indexStopI - app.indexStartI) == 0 && Math.abs(app.indexStopJ - app.indexStartJ) == 1) ||
+                                (Math.abs(app.indexStopI - app.indexStartI) == 1 && Math.abs(app.indexStopJ - app.indexStartJ) == 0))
+                                && (app.indexStopI >= app.indexStartI)
+                                && (app.indexStopJ >= 0 && app.indexStopJ <= 8 && app.indexStopI >= 5 && app.indexStopI <= 9)
                                 && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) != 1) {
 
-                                //qua lên xéo phải
-                                if (((app.indexStopI - app.indexStartI == 2 && app.indexStopJ - app.indexStartJ == 2))
-                                    && app.hasChessNode(app.chessMatrix[app.indexStartI + 1][app.indexStartJ + 1].left, app.chessMatrix[app.indexStartI + 1][app.indexStartJ + 1].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0) {
-                                    //toa do moi
-                                    var node = $("#" + this.id);
-                                    node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                    node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
-                                    app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-                                    flag = true;
-                                }
-                                //qua lên xéo trái
-                                if ((app.indexStopI - app.indexStartI == 2 && app.indexStopJ - app.indexStartJ == -2)
-                                    && app.hasChessNode(app.chessMatrix[app.indexStartI + 1][app.indexStartJ - 1].left, app.chessMatrix[app.indexStartI + 1][app.indexStartJ - 1].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0) {
-                                    //toa do moi
-                                    var node = $("#" + this.id);
-                                    node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                    node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
-                                    app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-                                    flag = true;
-                                }
-                                //di xuong xéo phải
-                                if ((app.indexStopI - app.indexStartI == -2 && app.indexStopJ - app.indexStartJ == 2)
-                                    && app.hasChessNode(app.chessMatrix[app.indexStartI + -1][app.indexStartJ + 1].left, app.chessMatrix[app.indexStartI - 1][app.indexStartJ + 1].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0) {
-                                    //toa do moi
-                                    var node = $("#" + this.id);
-                                    node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                    node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
-                                    app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-                                    flag = true;
-                                }
-                                //đi xuống xéo trái
-                                if ((app.indexStopI - app.indexStartI == -2 && app.indexStopJ - app.indexStartJ == -2)
-                                    && app.hasChessNode(app.chessMatrix[app.indexStartI - 1][app.indexStartJ - 1].left, app.chessMatrix[app.indexStartI - 1][app.indexStartJ - 1].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) == 0) {
-                                    //toa do moi
-                                    var node = $("#" + this.id);
-                                    node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
-                                    node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
-                                    app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-                                    flag = true;
-                                }
+                                //tao vi tri moi
+                                var node = $("#" + this.id);
+                                node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
+                                node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
+                                app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                flag = true;
+                            }
+                        }
+
+                        //5 tốt đen
+                        if (this.id.indexOf("totden") >= 0) {
+                            if ((app.indexStopI - app.indexStartI) == -1 && ((app.indexStopJ - app.indexStartJ) == 0)
+                                && (app.indexStopJ >= 0 && app.indexStopJ <= 8 && app.indexStopI >= 4 && app.indexStopI <= 5) &&
+                                app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) != 1) {
+                                //tao vi tri moi
+                                var node = $("#" + this.id);
+                                node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
+                                node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
+                                app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                flag = true;
+
+                            } else if (((Math.abs(app.indexStopI - app.indexStartI) == 0 && Math.abs(app.indexStopJ - app.indexStartJ) == 1) ||
+                                (Math.abs(app.indexStopI - app.indexStartI) == 1 && Math.abs(app.indexStopJ - app.indexStartJ) == 0))
+                                && (app.indexStopI <= app.indexStartI)
+                                && (app.indexStopJ >= 0 && app.indexStopJ <= 8 && app.indexStopI >= 0 && app.indexStopI <= 4)
+                                && app.hasChessNode(app.chessMatrix[app.indexStopI][app.indexStopJ].left, app.chessMatrix[app.indexStopI][app.indexStopJ].top, app.chessMatrix[app.indexStopI][app.indexStopJ].id) != 1) {
+
+                                //tao vi tri moi
+                                var node = $("#" + this.id);
+                                node.css({ 'top': app.chessMatrix[app.indexStopI][app.indexStopJ].top + 'px' });
+                                node.css({ 'left': app.chessMatrix[app.indexStopI][app.indexStopJ].left + 'px' });
+                                app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                flag = true;
                             }
                         }
 
