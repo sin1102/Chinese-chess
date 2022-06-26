@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\Chinese-chess\\Lib\\Lib.csproj": {}
+    "C:\\Users\\Admin\\Music\\Chinese-chess\\Lib\\Lib.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\Chinese-chess\\Lib\\Lib.csproj": {
+    "C:\\Users\\Admin\\Music\\Chinese-chess\\Lib\\Lib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\Chinese-chess\\Lib\\Lib.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Music\\Chinese-chess\\Lib\\Lib.csproj",
         "projectName": "Lib",
-        "projectPath": "D:\\GitHub\\Chinese-chess\\Lib\\Lib.csproj",
-        "packagesPath": "C:\\Users\\huynh\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\Chinese-chess\\Lib\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Music\\Chinese-chess\\Lib\\Lib.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Music\\Chinese-chess\\Lib\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "C:\\Users\\huynh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
