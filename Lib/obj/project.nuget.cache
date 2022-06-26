@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+9tjPGFr85Z+DxotACUpbdovmdhb3LO3o9Il/W9QHMqaEzgyY2WasgaGV0z2qxWpqvmvikeq76Zgs/EcnBLC0Q==",
+  "dgSpecHash": "kUz80HeS4VVdG1bLvkhihoGO4UJwf2/xkK3AWz09wfLTEKX+d+UrHoqLtEW/G4GpWgJ4r6ERBbLKMXc/86EsVA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Music\\Chinese-chess\\Lib\\Lib.csproj",
+  "projectFilePath": "E:\\Study\\Quản lý dự án CNTT\\Chinese-chess\\Lib\\Lib.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",

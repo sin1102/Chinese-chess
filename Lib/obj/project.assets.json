@@ -223,11 +223,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Music\\Chinese-chess\\Lib\\Lib.csproj",
+      "projectUniqueName": "E:\\Study\\Quản lý dự án CNTT\\Chinese-chess\\Lib\\Lib.csproj",
       "projectName": "Lib",
-      "projectPath": "C:\\Users\\Admin\\Music\\Chinese-chess\\Lib\\Lib.csproj",
+      "projectPath": "E:\\Study\\Quản lý dự án CNTT\\Chinese-chess\\Lib\\Lib.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Music\\Chinese-chess\\Lib\\obj\\",
+      "outputPath": "E:\\Study\\Quản lý dự án CNTT\\Chinese-chess\\Lib\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
