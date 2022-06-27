@@ -288,7 +288,7 @@
                                     node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                     node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                     app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-
+                                    app.type = false;
                                     flag = true;
                                 }
                             }
@@ -314,7 +314,7 @@
                                     node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                     node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                     app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-
+                                    app.type = false;
                                     flag = true;
                                 }
                             }
@@ -344,6 +344,7 @@
                                         node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                         node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        app.type = false;
                                         flag = true;
                                     }
                                     //qua lên xéo trái
@@ -361,6 +362,7 @@
                                         node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                         node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        app.type = false;
                                         flag = true;
                                     }
                                     //di xuong xéo phải
@@ -378,6 +380,7 @@
                                         node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                         node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        app.type = false;
                                         flag = true;
                                     }
                                     //đi xuống xéo trái
@@ -395,6 +398,7 @@
                                         node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                         node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        app.type = false;
                                         flag = true;
                                     }
                                 }
@@ -421,6 +425,7 @@
                                     node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                     node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                     app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                    app.type = false;
                                     flag = true;
                                 } else if (
                                     ((Math.abs(app.indexStopI - app.indexStartI) == 0 && Math.abs(app.indexStopJ - app.indexStartJ) == 1) ||
@@ -441,6 +446,7 @@
                                     node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                     node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                     app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                    app.type = false;
                                     flag = true;
                                 }
                             }
@@ -463,6 +469,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = false;
                                             flag = true;
                                             break phaoif;
                                         } else if (
@@ -480,6 +487,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = false;
                                             flag = true;
                                             break phaoif;
                                         }
@@ -505,6 +513,7 @@
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
                                             console.log(app.indexStartI + ", " + app.indexStartJ + "; " + app.indexStopI + ", " + app.indexStopJ);
+                                            app.type = false;
                                             flag = true;
                                             break phaoif;
                                         } else if (
@@ -523,6 +532,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = false;
                                             flag = true;
                                             break phaoif;
                                         }
@@ -538,6 +548,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = false;
                                             flag = true;
                                             break phaoif;
                                         } else if (
@@ -554,6 +565,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = false;
                                             flag = true;
                                             break phaoif;
                                         }
@@ -572,6 +584,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = false;
                                             flag = true;
                                             break phaoif;
                                         } else if (
@@ -588,6 +601,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = false;
                                             flag = true;
                                             break phaoif;
                                         }
@@ -610,6 +624,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = false;
                                             flag = true;
                                             break xeif;
                                         } else if (
@@ -624,6 +639,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = false;
                                             flag = true;
                                             break xeif;
                                         }
@@ -642,6 +658,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = false;
                                             flag = true;
                                             break xeif;
                                         } else if (
@@ -656,6 +673,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = false;
                                             flag = true;
                                             break xeif;
                                         }
@@ -669,6 +687,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = false;
                                             flag = true;
                                             break xeif;
                                         } else if (
@@ -682,6 +701,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = false;
                                             flag = true;
                                             break xeif;
                                         }
@@ -696,6 +716,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = false;
                                             flag = true;
                                             break xeif;
                                         } else if (
@@ -709,6 +730,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = false;
                                             flag = true;
                                             break xeif;
                                         }
@@ -739,6 +761,7 @@
                                         node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                         node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        app.type = false;
                                         flag = true;
                                     }
                                     //di len
@@ -755,6 +778,7 @@
                                         node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                         node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        app.type = false;
                                         flag = true;
                                     }
                                     //di xuong
@@ -771,6 +795,7 @@
                                         node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                         node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        app.type = false;
                                         flag = true;
                                     }
                                     //qua trai
@@ -787,11 +812,12 @@
                                         node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                         node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        app.type = false;
                                         flag = true;
                                     }
                                 }
                             }
-                            app.type = false;
+                            
                         } else if (!app.type && this.id.indexOf("den") >= 0){
                             if (this.id.indexOf("chutuongden") >= 0) {
                                 var tempStopI = app.indexStopI;
@@ -814,7 +840,7 @@
                                     node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                     node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                     app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-
+                                    app.type = true;
                                     flag = true;
                                 }
                             }
@@ -839,7 +865,7 @@
                                     node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                     node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                     app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
-
+                                    app.type = true;
                                     flag = true;
                                 }
                             }
@@ -859,6 +885,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = false;
                                             flag = true;
                                             break xeif;
                                         } else if (
@@ -873,6 +900,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = true;
                                             flag = true;
                                             break xeif;
                                         }
@@ -891,6 +919,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = true;
                                             flag = true;
                                             break xeif;
                                         } else if (
@@ -905,6 +934,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = true;
                                             flag = true;
                                             break xeif;
                                         }
@@ -918,6 +948,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = true;
                                             flag = true;
                                             break xeif;
                                         } else if (
@@ -931,6 +962,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = true;
                                             flag = true;
                                             break xeif;
                                         }
@@ -945,6 +977,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = true;
                                             flag = true;
                                             break xeif;
                                         } else if (
@@ -958,13 +991,14 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = true;
                                             flag = true;
                                             break xeif;
                                         }
                                     }
                                 }
                             }
-                            //4 Quân mã
+                            // mã đen
                             if (this.id.indexOf("maden") >= 0) {
                                 var tempStopI = app.indexStopI;
                                 var tempStopJ = app.indexStopJ;
@@ -989,6 +1023,7 @@
                                         node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                         node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        app.type = true;
                                         flag = true;
                                     }
                                     //di len
@@ -1005,6 +1040,7 @@
                                         node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                         node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        app.type = true;
                                         flag = true;
                                     }
                                     //di xuong
@@ -1021,6 +1057,7 @@
                                         node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                         node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        app.type = true;
                                         flag = true;
                                     }
                                     //qua trai
@@ -1037,6 +1074,7 @@
                                         node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                         node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        app.type = true;
                                         flag = true;
                                     }
                                 }
@@ -1069,6 +1107,7 @@
                                         node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                         node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        app.type = true;
                                         flag = true;
                                     }
                                     //qua lên xéo trái
@@ -1086,6 +1125,7 @@
                                         node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                         node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        app.type = true;
                                         flag = true;
                                     }
                                     //di xuong xéo phải
@@ -1103,6 +1143,7 @@
                                         node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                         node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        app.type = true;
                                         flag = true;
                                     }
                                     //đi xuống xéo trái
@@ -1120,6 +1161,7 @@
                                         node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                         node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                         app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                        app.type = true;
                                         flag = true;
                                     }
                                 }
@@ -1147,6 +1189,7 @@
                                     node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                     node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                     app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                    app.type = true;
                                     flag = true;
                                 } else if (
                                     ((Math.abs(app.indexStopI - app.indexStartI) == 0 && Math.abs(app.indexStopJ - app.indexStartJ) == 1) ||
@@ -1167,6 +1210,7 @@
                                     node.css({ top: app.chessMatrix[app.indexStopI][app.indexStopJ].top + "px" });
                                     node.css({ left: app.chessMatrix[app.indexStopI][app.indexStopJ].left + "px" });
                                     app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                    app.type = true;
                                     flag = true;
                                 }
                             }
@@ -1189,6 +1233,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = true;
                                             flag = true;
                                             break phaoif;
                                         } else if (
@@ -1206,6 +1251,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = true;
                                             flag = true;
                                             break phaoif;
                                         }
@@ -1231,6 +1277,7 @@
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
                                             console.log(app.indexStartI + ", " + app.indexStartJ + "; " + app.indexStopI + ", " + app.indexStopJ);
+                                            app.type = true;
                                             flag = true;
                                             break phaoif;
                                         } else if (
@@ -1249,6 +1296,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = true;
                                             flag = true;
                                             break phaoif;
                                         }
@@ -1264,6 +1312,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = true;
                                             flag = true;
                                             break phaoif;
                                         } else if (
@@ -1280,6 +1329,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = true;
                                             flag = true;
                                             break phaoif;
                                         }
@@ -1298,6 +1348,7 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = true;
                                             flag = true;
                                             break phaoif;
                                         } else if (
@@ -1314,13 +1365,14 @@
                                             node.css({ top: app.chessMatrix[tempStopI][tempStopJ].top + "px" });
                                             node.css({ left: app.chessMatrix[tempStopI][tempStopJ].left + "px" });
                                             app.$set(app.chessMatrix[app.indexStartI][app.indexStartJ], "id", "");
+                                            app.type = true;
                                             flag = true;
                                             break phaoif;
                                         }
                                     }
                                 }
                             }
-                            app.type = true;
+                         
                         }
                         
                         
