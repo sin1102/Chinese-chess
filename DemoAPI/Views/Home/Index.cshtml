@@ -205,6 +205,11 @@
                 node.css({ left: left + "px" });
             },
             undo() {
+                if (app.type) {
+                    app.type = false;
+                } else {
+                    app.type = true;
+                }
                 const lastStack = Stack.pop();
                 redo = lastStack;
                 const previousStack = Stack[Stack.length - 1];
@@ -227,6 +232,11 @@
                 Stack = [];
             },
             redo() {
+                if (app.type) {
+                    app.type = false;
+                } else {
+                    app.type = true;
+                }
                 var result = [];
                 result = JSON.parse(JSON.stringify(redo));
                 for (var i = 0; i < result.length; i++) {
