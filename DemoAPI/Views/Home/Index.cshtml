@@ -280,6 +280,8 @@
                         var flag = false;
                         if (app.type && this.id.indexOf("do") >= 0) {
                             if (this.id.indexOf("chutuongdo") >= 0) {
+                                var tempStopI = app.indexStopI;
+                                var tempStopJ = app.indexStopJ;
                                 if (
                                     ((Math.abs(app.indexStopI - app.indexStartI) == 0 && Math.abs(app.indexStopJ - app.indexStartJ) == 1) ||
                                         (Math.abs(app.indexStopI - app.indexStartI) == 1 && Math.abs(app.indexStopJ - app.indexStartJ) == 0)) &&
